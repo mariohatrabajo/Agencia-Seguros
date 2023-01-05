@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dataset_seleccionInformesEstados" targetNamespace="http://tempuri.org/dataset_seleccionInformesEstados.xsd" xmlns:mstns="http://tempuri.org/dataset_seleccionInformesEstados.xsd" xmlns="http://tempuri.org/dataset_seleccionInformesEstados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="agencia_segurosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="agencia_segurosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AgenciaSeguros.Properties.Settings.GlobalReference.Default.agencia_segurosConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="polizasTableAdapter" GeneratorDataComponentClassName="polizasTableAdapter" Name="polizas" UserDataComponentName="polizasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="agencia_segurosConnectionString (Settings)" DbObjectName="agencia_seguros.polizas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT `Estado` FROM `polizas`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dataset_seleccionInformesEstados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dataset_seleccionInformesEstados" msprop:Generator_UserDSName="dataset_seleccionInformesEstados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="polizas" msprop:Generator_TableClassName="polizasDataTable" msprop:Generator_TableVarName="tablepolizas" msprop:Generator_RowChangedName="polizasRowChanged" msprop:Generator_TablePropName="polizas" msprop:Generator_RowDeletingName="polizasRowDeleting" msprop:Generator_RowChangingName="polizasRowChanging" msprop:Generator_RowEvHandlerName="polizasRowChangeEventHandler" msprop:Generator_RowDeletedName="polizasRowDeleted" msprop:Generator_RowClassName="polizasRow" msprop:Generator_UserTableName="polizas" msprop:Generator_RowEvArgName="polizasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
